@@ -5,7 +5,6 @@
  * @date    2016-04-14 17:09:22
  * @copyright Kunlun
  */
-
 $zip = new ZipArchive; 
 $res = $zip->open('test.zip'); 
 if ($res === true) {     
