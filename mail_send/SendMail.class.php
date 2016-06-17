@@ -17,14 +17,14 @@ class SendMail {
     // 2 = client and server messages
     private $mailDebug      = 0;
     private $debugOutPut    = 'html';
-    private $host           = 'smtp.sina.com.cn';
+    private $host           = '';//邮件服务器地址
     private $smtpAuth       = true;
-    private $userName       = 'szhcool1129@sina.com';
-    private $passWord       = '';
-    private $setFromAddress = 'szhcool1129@sina.com';
-    private $setFromName    = '天普药业';
-    private $addReplyTo     = 'szhcool1129@sina.com';
-    private $altBody        = '天普员工内部邮件，请勿回复！';
+    private $userName       = '';//邮箱登录名称
+    private $passWord       = '';//邮箱登录密码
+    private $setFromAddress = '';//邮箱地址
+    private $setFromName    = '';//邮件发送方
+    private $addReplyTo     = '';//邮箱回复地址
+    private $altBody        = '';
     private $Smtp;
 
     public function __construct($receiverAdderss, $receiverName, $subject, $sendContent){
@@ -61,5 +61,5 @@ class SendMail {
     }
 }
 
-$sendMail = new SendMail('735767227@qq.com', 'amos','天普邮件测试', '这里是内容');
+$sendMail = new SendMail($receiver, $receiver_name,$title, $content);
 $sendRst = $sendMail->send();
